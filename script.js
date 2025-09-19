@@ -1,20 +1,24 @@
 // Error 1:
+// The error was mispelling, message wasn't spelt right.
 let message = 'Welcome to the debugging exercise!';
-console.log(mesage); 
+console.log(message); 
 
 // Error 2: 
-let button = document.querySelector('.actionButton'); 
+// I'm unsure what the error was, I know that I had it as class and ID and it should have been one or the other.
+let button = document.querySelector('#actionButton');
 button.addEventListener('click', eventHandler); 
 
 // Error 3: 
+// No error, everything is defined.
 function eventHandler() {
   console.log('Button clicked');
   displayOutput();
 }
 
 // Error 4: 
+// No error, but if #output doesn't exist the output would not work.
 function displayOutput() {
-  let output = document.querySelector('#output'); 
+  let output = document.querySelector("#output"); 
   output.innerText = 'You clicked the button!';
 }
 
@@ -92,4 +96,4 @@ x = 5;
 let myString = 'Hello';
 myString.property = 'World';
 console.log(myString.property); 
-
+}
