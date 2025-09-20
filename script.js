@@ -5,8 +5,9 @@ console.log(message);
 
 // Error 2: 
 // I'm unsure what the error was, I know that I had it as class and ID and it should have been one or the other.
-let button = document.querySelector('#actionButton');
-button.addEventListener('click', eventHandler);
+  let button = document.querySelector('#actionButton');
+  button.addEventListener('click', eventHandler);
+
 
 // Error 3: 
 // No error, everything is defined.
