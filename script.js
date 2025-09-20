@@ -105,7 +105,7 @@ if (five == 5) {
   // The error is x isn't declared.
   let x = 5;
   console.log(x);
-
+  
   // Error 20:
   // The error is the property on primitive values, I had to look this one up!
   let myString = new String('Hello');
