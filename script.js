@@ -62,46 +62,53 @@ let importantData =
 console.log(importantData);
 
 // Error 12: 
-// The error is it isn't defined
+// The error is, the function isn't defined. 
+function trytoCallFunction() {
+  console.log("Function called");
+}
 tryToCallFunction();
 
 // Error 13:
-let user = { namee: 'Alice' };
+// The error property name is spelled incorrectly.
+let user = { name: 'Alice' };
 console.log(user.name)
 
 // Error 14: 
+// The error is it needs to be a string method first.
 let someNumber = 123;
-console.log(someNumber.toUpperCase());
+console.log(someNumber.toString().toUpperCase());
 
 // Error 15: 
-let greeting = Hello, world!;
+// The error is it is missing quotes.
+let greeting = 'Hello, world!';
 
 // Error 16: 
-for (let i = 0; i < 5; i++); {
+// The error is there shouldn't be a semicolon after loop.
+for (let i = 0; i < 5; i++) {
   console.log(i);
 }
 
 // Error 17:
-let five = '5';
-if (five === 5) {
+// The error is there are too many equal signs.
+if (five == 5) {
   console.log('Five is equal to 5'); // This one should be logged
 } else {
   console.log('Five is not equal to 5');
 
   // Error 18:
-  Array.prototype.push = function () {
-    console.log('Array push method is overwritten');
-  };
+  // The error is that there is too much code which makes it run differently.
   let numbers = [];
   numbers.push(1);
   console.log(numbers);
 
   // Error 19:
+  // The error is x isn't declared.
+  let x = 5;
   console.log(x);
-  x = 5;
 
   // Error 20:
-  let myString = 'Hello';
+  // The error is the property on primitive values, I had to look this one up!
+  let myString = new String('Hello');
   myString.property = 'World';
   console.log(myString.property);
 }
