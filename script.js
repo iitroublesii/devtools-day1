@@ -20,11 +20,13 @@ function eventHandler() {
 // No error, but if #output doesn't exist the output would not work.
 function displayOutput() {
   let output = document.querySelector("#output");
+  if (output) {
   output.innerText = 'You clicked the button!';
+  }
 }
 
 // Error 6: Misusing variable scope
-// The error is let localMessage should be outside the function and let should not be in the function.
+// The error is localMessage should be outside the function.
 let localMessage;
 function updateMessage() {
   localMessage = 'Updated message';
@@ -33,8 +35,8 @@ updateMessage();
 console.log(localMessage);
 
 // Error 7:
-//The error is, it was written incorrectly which made it run wrong.
-document.getElementById('testButton').addEventListener('click', testFunction);
+//The error is, it was written incorrectly which made it run wrong. testButtion needed to be actionButton.
+document.getElementById('actionButton').addEventListener('click', testFunction);
 
 function testFunction() {
   console.log('Test function executed');
@@ -67,7 +69,7 @@ console.log(importantData);
 function trytoCallFunction() {
   console.log("Function called");
 }
-tryToCallFunction();
+trytoCallFunction();
 
 // Error 13:
 // The error property name is spelled incorrectly.
@@ -75,7 +77,7 @@ let user = { name: 'Alice' };
 console.log(user.name)
 
 // Error 14: 
-// The error is it needs to be a string method first.
+// The error is trying to uppercase numbers.
 let someNumber = 123;
 console.log(someNumber.toString().toUpperCase());
 
@@ -90,7 +92,7 @@ for (let i = 0; i < 5; i++) {
 }
 
 // Error 17:
-// The error is there are too many equal signs.
+// The error is 5 wasn't defined.
 if (five == 5) {
   console.log('Five is equal to 5'); // This one should be logged
 } else {
@@ -108,7 +110,7 @@ if (five == 5) {
   console.log(x);
 
   // Error 20:
-  // The error is primitives like string can't have properties, I had to look this one up!
+  // The error is primitivestrings don't persist custom properties, I had to look this one up!
   let myString = new String('Hello');
   myString.property = 'World';
   console.log(myString.property);
